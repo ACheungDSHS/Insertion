@@ -88,6 +88,36 @@ namespace Insertion
     {
         static void Main(string[] args)
         {
+            char response;
+            
+            Console.WriteLine("Please let me know what kinda sort you would like (i)nsertion sort, or (b)ubble sort, or (q)uit");
+            for(; ; )
+            {
+                response = Console.ReadKey().KeyChar;
+                switch (response)
+                {
+                    case 'i': case 'I':
+                        InsertionSort();
+                        break;
+                    case 'b': case 'B':
+                        BubbleSort();
+                        break;
+                    case 'q': case 'Q':
+                        return;
+                        /* NOTREACHED */
+                    default:
+                        Console.WriteLine("Um, what are you playing at?");
+                        break;
+                }
+            }
+        }
+
+        static void BubbleSort()
+        {
+            // Do the BubbleSort dance here!
+        }
+
+        static void InsertionSort() {
             var unsortedList = new SortingList(10);
             var sortedList = new SortingList(unsortedList.Length);
             
