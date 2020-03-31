@@ -13,6 +13,16 @@ namespace Insertion
             list = new int[_____];
         }
 
+        public int getListItem(int i)
+        {
+            return (list[i]);
+        }
+
+        public void setListItem(int i, int value)
+        {
+            list[i] = value;
+        }
+
         public void Randomise()
         {
             var random = new Random();
